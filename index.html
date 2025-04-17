@@ -6,12 +6,14 @@
 
     <!-- SEO Meta Tags -->
     <title>KIVO - Enduring Product Design Studio</title>
-    <meta name="description" content="KIVO partners with innovative brands to design and develop timeless products focused on longevity, quality, functional clarity, and minimalist aesthetics.">
-    <meta name="keywords" content="industrial design, product design, minimalist design, design studio, KIVO, durable goods, sustainable design, design for manufacturing">
+    <!-- Updated description reflecting dual nature -->
+    <meta name="description" content="KIVO designs timeless products focused on longevity and minimalist aesthetics, partnering with innovative brands and developing our own signature collection.">
+    <meta name="keywords" content="industrial design, product design, minimalist design, design studio, KIVO, durable goods, sustainable design, design for manufacturing, client design services, internal product development">
 
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:title" content="KIVO - Enduring Product Design Studio">
-    <meta property="og:description" content="Designing timeless products built on quality, functional clarity, and minimalist aesthetics.">
+    <!-- Updated description -->
+    <meta property="og:description" content="KIVO designs timeless products, partnering with innovative brands and developing our own signature collection.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://your-kivo-website.com/"> <!-- !! UPDATE THIS URL !! -->
     <meta property="og:image" content="https://your-kivo-website.com/kivo-social-share-image.jpg"> <!-- !! UPDATE with a share image URL !! -->
@@ -20,7 +22,8 @@
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="KIVO - Enduring Product Design Studio">
-    <meta name="twitter:description" content="Designing timeless products built on quality, functional clarity, and minimalist aesthetics.">
+    <!-- Updated description -->
+    <meta name="twitter:description" content="KIVO designs timeless products, partnering with innovative brands and developing our own signature collection.">
     <meta name="twitter:image" content="https://your-kivo-website.com/kivo-social-share-image.jpg"> <!-- !! UPDATE with a share image URL !! -->
 
     <!-- Google Fonts: Inter -->
@@ -114,6 +117,10 @@
         p {
             margin-bottom: var(--spacing-unit);
             max-width: 70ch; /* Generous line length for readability */
+        }
+        /* Allow bold tag */
+        strong, b {
+            font-weight: 700;
         }
 
         a {
@@ -288,7 +295,19 @@
         .portfolio-tags span {
             display: inline-block; background-color: var(--color-background-alt); color: var(--color-text-light);
             padding: 0.2em 0.6em; border-radius: var(--border-radius); margin-right: 0.5em; margin-bottom: 0.5em;
+            border: 1px solid var(--color-border); /* Add subtle border to tags */
+            font-weight: 500;
         }
+        /* Style specific tags differently if desired */
+        .portfolio-tags span.tag-client { /* Example: style client tags */
+            /* background-color: #e0f2fe; */
+            /* color: #0c4a6e; */
+        }
+        .portfolio-tags span.tag-internal { /* Example: style internal tags */
+            /* background-color: #f3e8ff; */
+            /* color: #581c87; */
+        }
+
 
         /* Testimonials */
         .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: calc(var(--spacing-unit) * 2); }
@@ -327,7 +346,7 @@
             <nav aria-label="Main Navigation">
                 <ul>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
+                    <li><a href="#services">Capabilities</a></li> <!-- Renamed nav item -->
                     <li><a href="#process">Process</a></li>
                     <li><a href="#work">Work</a></li>
                     <li><a href="#testimonials">Clients</a></li>
@@ -343,7 +362,8 @@
         <section class="hero" id="home">
             <div class="container hero-content">
                 <h1>Design That Endures.</h1>
-                <p>KIVO collaborates with forward-thinking brands to create exceptional products defined by longevity, functional clarity, and considered aesthetics.</p>
+                <!-- ** UPDATED TEXT ** -->
+                <p>KIVO crafts exceptional products defined by longevity and considered aesthetics – partnering with innovative brands and pursuing our own design explorations.</p>
                 <a href="#contact" class="button button-primary">Start a Conversation</a>
                 <a href="#work" class="button button-secondary" style="margin-left: 1em;">View Our Work</a>
             </div>
@@ -354,23 +374,27 @@
             <div class="container">
                 <h2>Philosophy: Beyond the Superficial</h2>
                  <p class="section-intro">We believe great design isn't just about appearance; it's about creating value that lasts. Our approach is grounded in principles that ensure enduring quality and relevance.</p>
+                <!-- ** UPDATED TEXT ** -->
                 <p>
-                    KIVO was founded on the conviction that the objects we interact with daily should be companions, not consumables. We reject planned obsolescence and disposable culture, focusing instead on **longevity**, **material honesty**, and **precision execution**. Our minimalist ethos strips away the non-essential, allowing the inherent quality of materials and the clarity of function to define the product experience. We design for decades, not seasons.
+                    KIVO was founded on the conviction that the objects we interact with daily should be companions, not consumables. We reject planned obsolescence and disposable culture, focusing instead on <strong>longevity</strong>, <strong>material honesty</strong>, and <strong>precision execution</strong>. This philosophy is the bedrock of our work, applied rigorously whether we are elevating a partner's brand through product design or developing KIVO's own signature pieces. Our minimalist ethos strips away the non-essential, allowing the inherent quality of materials and the clarity of function to define the product experience. We design for decades, not seasons.
                 </p>
             </div>
         </section>
 
         <!-- Services Section -->
-        <section id="services">
+        <section id="services"> <!-- ID remains 'services' for linking -->
             <div class="container">
-                <h2>Capabilities: From Concept to Creation</h2>
-                <p class="section-intro">We offer a comprehensive suite of design services tailored to bring meaningful products to life, ensuring alignment with your brand and manufacturing realities.</p>
+                <h2>Capabilities: From Concept to Creation</h2> <!-- Headline remains -->
+                 <!-- ** UPDATED TEXT ** -->
+                <p class="section-intro">We offer a comprehensive suite of design services, applying our core principles to develop meaningful products – both for client partners and our internal KIVO collection.</p>
+                 <!-- ** UPDATED LIST ** -->
                 <ul>
-                    <li>**Industrial Design & Product Development:** Concept generation, sketching, 3D modeling, prototyping, user testing.</li>
-                    <li>**Material Strategy & CMF:** Expert selection of durable and appropriate materials, defining color palettes and surface finishes.</li>
-                    <li>**Design for Manufacturing (DFM):** Engineering liaison, technical drawings, tolerance analysis, supplier collaboration.</li>
-                    <li>**Physical Brand Expression:** Translating brand identity into tangible product experiences and design language systems.</li>
-                    <li>**Sustainable Design Consulting:** Integrating lifecycle thinking, responsible sourcing, and end-of-life considerations.</li>
+                    <li><strong>Industrial Design & Product Development:</strong> Concept generation, sketching, 3D modeling, prototyping, user testing for client projects and internal initiatives.</li>
+                    <li><strong>Material Strategy & CMF:</strong> Expert selection of durable and appropriate materials, defining color palettes and surface finishes across all projects.</li>
+                    <li><strong>Design for Manufacturing (DFM):</strong> Engineering liaison, technical drawings, tolerance analysis, supplier collaboration for efficient production.</li>
+                    <li><strong>Physical Brand Expression:</strong> Translating brand identity into tangible product experiences for partner brands.</li>
+                    <li><strong>KIVO Originals - In-House Product Creation:</strong> Conceptualizing, designing, developing, and bringing KIVO's own signature products to market.</li>
+                    <li><strong>Sustainable Design Consulting:</strong> Integrating lifecycle thinking, responsible sourcing, and end-of-life considerations into the design process.</li>
                 </ul>
             </div>
         </section>
@@ -379,7 +403,8 @@
         <section id="process">
             <div class="container">
                 <h2>Our Collaborative Process</h2>
-                <p class="section-intro">A structured yet flexible approach ensures clarity, efficiency, and exceptional outcomes throughout the design journey.</p>
+                 <!-- ** UPDATED TEXT ** -->
+                <p class="section-intro">Our structured approach ensures clarity and exceptional outcomes. While detailed here for client collaborations, these core phases often inform our internal development process as well, ensuring rigor and quality throughout.</p>
                 <ol class="process-steps">
                     <li class="process-step">
                         <h4>01 / Discover & Define</h4>
@@ -409,50 +434,67 @@
         <section id="work">
             <div class="container">
                 <h2>Selected Work: Design in Practice</h2>
-                <p class="section-intro">Explore examples where our principles of longevity, clarity, and material honesty have shaped successful products.</p>
+                <!-- ** UPDATED TEXT ** -->
+                <p class="section-intro">Explore a selection of projects showcasing our design principles in action. This includes collaborations with leading brands and examples from KIVO's own evolving collection of original designs.</p>
                 <div class="portfolio-grid">
-                    <!-- Portfolio Item 1 -->
+                    <!-- Portfolio Item 1 (Example: Internal) -->
                     <article class="portfolio-item">
                         <div class="portfolio-image">
-                             <img src="https://via.placeholder.com/600x440/eeeeee/cccccc?text=KIVO+Project+Image+1" alt="Project Alpha Image"> <!-- !! REPLACE IMAGE !! -->
+                             <img src="https://via.placeholder.com/600x440/eeeeee/cccccc?text=KIVO+Project+Image+1" alt="Precision Writing Instrument"> <!-- !! REPLACE IMAGE !! -->
                         </div>
                         <div class="portfolio-content">
                             <h3>Precision Writing Instrument</h3>
                             <p>A machined pen designed for balance, tactile satisfaction, and lifetime use, featuring a robust click mechanism and standardized refill compatibility.</p>
-                            <div class="portfolio-tags"><span>Industrial Design</span> <span>Metalwork</span> <span>Ergonomics</span></div>
+                            <!-- ** UPDATED TAGS ** -->
+                            <div class="portfolio-tags">
+                                <span class="tag-internal">KIVO Initiative</span>
+                                <span>Industrial Design</span>
+                                <span>Metalwork</span>
+                            </div>
                         </div>
                     </article>
-                    <!-- Portfolio Item 2 -->
+                    <!-- Portfolio Item 2 (Example: Client) -->
                      <article class="portfolio-item">
                         <div class="portfolio-image">
-                             <img src="https://via.placeholder.com/600x440/dddddd/bbbbbb?text=KIVO+Project+Image+2" alt="Project Beta Image"> <!-- !! REPLACE IMAGE !! -->
+                             <img src="https://via.placeholder.com/600x440/dddddd/bbbbbb?text=Client+Project+Image+2" alt="Minimalist Tech Accessory for Brand X"> <!-- !! REPLACE IMAGE !! -->
                         </div>
                         <div class="portfolio-content">
-                            <h3>Minimalist Steel Shelving</h3>
-                            <p>Modular shelving system crafted from powder-coated sheet steel, balancing visual lightness with structural integrity for versatile home and office use.</p>
-                            <div class="portfolio-tags"><span>Furniture Design</span> <span>Sheet Metal</span> <span>Modularity</span></div>
+                            <h3>Minimalist Tech Accessory for Brand X</h3>
+                            <p>Developed a line of durable tech accessories aligning with the client's premium brand identity, focusing on material honesty and user experience.</p>
+                             <!-- ** UPDATED TAGS ** -->
+                             <div class="portfolio-tags">
+                                <span class="tag-client">Client Collaboration</span>
+                                <span>Product Design</span>
+                                <span>Brand Expression</span>
+                            </div>
                         </div>
                     </article>
-                    <!-- Portfolio Item 3 -->
+                    <!-- Portfolio Item 3 (Example: Internal) -->
                      <article class="portfolio-item">
                         <div class="portfolio-image">
-                             <img src="https://via.placeholder.com/600x440/cccccc/aaaaaa?text=KIVO+Project+Image+3" alt="Project Gamma Image"> <!-- !! REPLACE IMAGE !! -->
+                             <img src="https://via.placeholder.com/600x440/cccccc/aaaaaa?text=KIVO+Project+Image+3" alt="Modular Steel Shelving System"> <!-- !! REPLACE IMAGE !! -->
                         </div>
                         <div class="portfolio-content">
-                            <h3>Sustainable Personal Care Tool</h3>
-                            <p>Durable safety razor emphasizing repairability, high-quality stainless steel construction, and reduced environmental impact compared to disposable alternatives.</p>
-                             <div class="portfolio-tags"><span>Product Design</span> <span>Sustainability</span> <span>DFM</span></div>
+                            <h3>Modular Steel Shelving</h3>
+                            <p>Internal exploration into versatile home/office furniture, crafted from powder-coated sheet steel, balancing visual lightness with structural integrity.</p>
+                             <!-- ** UPDATED TAGS ** -->
+                             <div class="portfolio-tags">
+                                <span class="tag-internal">KIVO Initiative</span>
+                                <span>Furniture Design</span>
+                                <span>Sheet Metal</span>
+                                <span>Modularity</span>
+                            </div>
                         </div>
                     </article>
-                     <!-- Add more portfolio items as needed -->
+                     <!-- Add more portfolio items as needed, tagging appropriately -->
                 </div>
             </div>
         </section>
 
-        <!-- Testimonials Section -->
+        <!-- Testimonials Section (Remains focused on clients) -->
         <section id="testimonials">
             <div class="container">
-                <h2>What Our Clients Say</h2>
+                <h2>What Our Partners Say</h2> <!-- Adjusted title slightly -->
                 <p class="section-intro">Building lasting partnerships through exceptional design and collaboration.</p>
                 <div class="testimonial-grid">
                     <div class="testimonial-item">
@@ -478,19 +520,13 @@
         <section id="contact">
             <div class="container">
                 <h2 class="text-center">Let's Build Something Enduring Together</h2>
+                 <!-- ** UPDATED TEXT ** -->
                 <p class="section-intro">
-                    Ready to discuss your next project or learn more about KIVO? Reach out – we look forward to hearing from you.
+                    Ready to discuss a potential collaboration for your brand, inquire about KIVO's original products, or explore other opportunities? Reach out – we look forward to hearing from you.
                     Use the form below or email us directly at <a href="mailto:freddycharles04@gmail.com">freddycharles04@gmail.com</a>. <!-- !! REPLACE EMAIL !! -->
                 </p>
 
                 <!-- Contact Form Structure -->
-                <!-- IMPORTANT: This form needs a backend service to actually send emails. -->
-                <!-- Option 1: Use Formspree (https://formspree.io/) -->
-                <!--           Replace 'YOUR_FORMSPREE_ENDPOINT' with your actual Formspree endpoint URL -->
-                <!-- Option 2: Use Netlify Forms (if hosting on Netlify) -->
-                <!--           Add 'data-netlify="true"' attribute to the <form> tag -->
-                <!-- Option 3: Use another backend or service -->
-
                 <form action="YOUR_FORMSPREE_ENDPOINT" method="POST" class="contact-form"> <!-- !! SET FORM ACTION !! -->
                     <div class="form-group">
                         <label for="name">Name</label>
@@ -508,8 +544,6 @@
                         <label for="message">Message</label>
                         <textarea id="message" name="message" rows="6" required aria-required="true"></textarea>
                     </div>
-                     <!-- Optional: Add a honeypot field for basic spam prevention if your service doesn't provide it -->
-                     <!-- <input type="text" name="_gotcha" style="display:none !important"> -->
                     <div class="form-submit">
                         <button type="submit" class="button button-primary">Send Message</button>
                     </div>
@@ -528,7 +562,6 @@
                 <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
                 <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a> |
                 <a href="#" target="_blank" rel="noopener noreferrer">Behance</a>
-                <!-- Add other relevant links -->
             </p>
             <p style="font-size: 0.8rem; margin-top: 1rem;">Crafted with focus and precision.</p>
         </div>
@@ -549,16 +582,12 @@
             function smoothScroll(targetId) {
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
-                    // Calculate offset if header is sticky
                     const headerOffset = document.querySelector('header')?.offsetHeight || 0;
                     const elementPosition = targetElement.getBoundingClientRect().top;
                     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
-                    // Optionally close mobile menu if you add one later
+                    window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                    if(history.pushState) { history.pushState(null, null, targetId); }
+                    else { window.location.hash = targetId; }
                 }
             }
 
@@ -568,60 +597,79 @@
                     e.preventDefault();
                     const targetId = this.getAttribute('href');
                     smoothScroll(targetId);
-
-                    // Optional: Update URL hash without jump
-                    if(history.pushState) { history.pushState(null, null, targetId); }
-                    else { window.location.hash = targetId; }
                 });
             });
 
              // Intersection Observer for Nav Link Highlighting & Section Fade-in
             const observerOptions = {
                 root: null, // viewport
-                rootMargin: `-${document.querySelector('header')?.offsetHeight || 70}px 0px -40% 0px`, // Adjust top margin for header, bottom margin to trigger earlier
-                threshold: 0 // Trigger as soon as element enters margin
+                // Adjust rootMargin: top margin offsets for sticky header, bottom margin makes active state trigger sooner when scrolling down
+                rootMargin: `-${(document.querySelector('header')?.offsetHeight || 70) + 10}px 0px -45% 0px`,
+                threshold: 0 // Trigger as soon as the section boundary crosses the rootMargin
             };
+
+            let lastActiveLink = null; // Keep track of the last activated link
 
             const sectionObserver = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                      // Fade-in animation
                     if (entry.isIntersecting) {
                          entry.target.classList.add('visible');
-                    } else {
-                         // Optional: remove visibility if you want fade-out on scroll up
-                         // entry.target.classList.remove('visible');
                     }
+                    // Active nav link highlighting logic: find the *topmost* visible section
+                    // Find the topmost section that is intersecting within the threshold margins
+                    let topmostVisibleSectionId = null;
+                    let minTop = window.innerHeight;
 
-                    // Active nav link highlighting
-                    const id = entry.target.getAttribute('id');
-                    const navLink = document.querySelector(`nav a[href="#${id}"]`);
+                    sections.forEach(sec => {
+                        const rect = sec.getBoundingClientRect();
+                        // Check if section is within the vertical bounds defined implicitly by rootMargin
+                        const topEdgeInView = rect.top < (window.innerHeight * (1 - 0.45)) - (document.querySelector('header')?.offsetHeight || 70); // Adjusted top check based on bottom margin
+                        const bottomEdgeInView = rect.bottom > (document.querySelector('header')?.offsetHeight || 70) + 10; // Adjusted bottom check based on top margin
 
-                    if (entry.isIntersecting && entry.intersectionRatio > 0) { // Check ratio to ensure it's significantly in view
-                        // Remove active class from all links first
-                        navLinks.forEach(link => link.classList.remove('active'));
-                        // Add active class to the current one
-                        if (navLink) {
-                            navLink.classList.add('active');
+                        if (topEdgeInView && bottomEdgeInView && rect.top < minTop) {
+                            minTop = rect.top;
+                            topmostVisibleSectionId = sec.getAttribute('id');
                         }
+                    });
+
+                    // Update active link based on the topmost visible section
+                    if (topmostVisibleSectionId) {
+                        const newActiveLink = document.querySelector(`nav a[href="#${topmostVisibleSectionId}"]`);
+                        if (newActiveLink !== lastActiveLink) {
+                            // Remove active class from previous link
+                            if (lastActiveLink) {
+                                lastActiveLink.classList.remove('active');
+                            }
+                            // Add active class to the current link
+                            if (newActiveLink) {
+                                newActiveLink.classList.add('active');
+                                lastActiveLink = newActiveLink;
+                            } else {
+                                lastActiveLink = null; // Reset if no link found for the section
+                            }
+                        }
+                    } else if (window.scrollY < 200 && lastActiveLink) {
+                         // If scrolled near the top and no section is active, deactivate all
+                         lastActiveLink.classList.remove('active');
+                         lastActiveLink = null;
                     }
                 });
             }, observerOptions);
 
-            sections.forEach(section => {
-                sectionObserver.observe(section);
-            });
+            sections.forEach(section => { sectionObserver.observe(section); });
 
-             // Also observe the hero section for fade-in (if needed, might already be visible)
+             // Observe the hero section separately just for fade-in
              const heroSection = document.getElementById('home');
              if (heroSection) {
                 const heroObserver = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {
                         if (entry.isIntersecting) {
                             entry.target.classList.add('visible');
-                            heroObserver.unobserve(entry.target); // Only animate once
+                            heroObserver.unobserve(entry.target);
                         }
                     });
-                }, { threshold: 0.1 }); // Trigger when 10% visible
+                }, { threshold: 0.1 });
                 heroObserver.observe(heroSection);
              }
 
@@ -631,30 +679,38 @@
             // --- Contact Form Placeholder Logic ---
             const contactForm = document.querySelector('.contact-form');
             if (contactForm) {
-                 // You would typically add JS validation here before submission
-                 // e.g., checking if required fields are filled, email format is valid.
-                 // However, the actual sending requires the backend service configured
-                 // in the form's 'action' attribute (like Formspree or Netlify).
                 contactForm.addEventListener('submit', function(e) {
-                     // Example: Basic check (can be much more robust)
                      const requiredInputs = contactForm.querySelectorAll('[required]');
                      let isValid = true;
                      requiredInputs.forEach(input => {
+                         // Simple validation: Check if empty or only whitespace
                          if (!input.value.trim()) {
                              isValid = false;
-                             // Add some visual indication of error (e.g., border color)
-                             input.style.borderColor = 'red';
+                             input.style.borderColor = 'red'; // Indicate error
+                             // Optional: Add error message element
                          } else {
-                             input.style.borderColor = 'var(--color-border)'; // Reset border
+                             input.style.borderColor = 'var(--color-border)'; // Reset border on valid
+                             // Optional: Remove error message element
+                         }
+                         // Add more specific validation (e.g., email format) if needed
+                         if (input.type === 'email' && input.value.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value)) {
+                            isValid = false;
+                            input.style.borderColor = 'red';
                          }
                      });
 
                      if (!isValid) {
-                         e.preventDefault(); // Stop submission if basic validation fails
-                         alert('Please fill out all required fields.');
+                         e.preventDefault(); // Stop submission
+                         alert('Please fill out all required fields correctly.'); // Simple alert
                      } else {
-                         // Optionally show a "Sending..." message here
-                         console.log('Form data appears valid, attempting submission to backend...');
+                         // Optional: Disable button and show sending state
+                         const submitButton = contactForm.querySelector('button[type="submit"]');
+                         if (submitButton) {
+                             submitButton.disabled = true;
+                             submitButton.textContent = 'Sending...';
+                         }
+                         console.log('Form data appears valid, attempting submission...');
+                         // Form submission continues to the 'action' URL...
                      }
                 });
             }
