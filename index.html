@@ -6,13 +6,11 @@
 
     <!-- SEO Meta Tags -->
     <title>KIVO - Enduring Product Design Studio</title>
-    <!-- Updated description reflecting dual nature -->
     <meta name="description" content="KIVO designs timeless products focused on longevity and minimalist aesthetics, partnering with innovative brands and developing our own signature collection.">
     <meta name="keywords" content="industrial design, product design, minimalist design, design studio, KIVO, durable goods, sustainable design, design for manufacturing, client design services, internal product development">
 
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:title" content="KIVO - Enduring Product Design Studio">
-    <!-- Updated description -->
     <meta property="og:description" content="KIVO designs timeless products, partnering with innovative brands and developing our own signature collection.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://your-kivo-website.com/"> <!-- !! UPDATE THIS URL !! -->
@@ -22,7 +20,6 @@
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="KIVO - Enduring Product Design Studio">
-    <!-- Updated description -->
     <meta name="twitter:description" content="KIVO designs timeless products, partnering with innovative brands and developing our own signature collection.">
     <meta name="twitter:image" content="https://your-kivo-website.com/kivo-social-share-image.jpg"> <!-- !! UPDATE with a share image URL !! -->
 
@@ -40,321 +37,229 @@
         /* --- CSS Variables (Theme & Layout) --- */
         :root {
             --color-background: #ffffff;
-            --color-background-alt: #f8f8f8; /* Subtle alternating background */
+            --color-background-alt: #f8f8f8;
             --color-text: #2d2d2d;
             --color-text-light: #666666;
             --color-heading: #1a1a1a;
             --color-border: #e5e5e5;
-            --color-accent: #005eff; /* Refined accent blue - CHANGE AS NEEDED */
+            --color-accent: #005eff;
             --color-accent-hover: #004acc;
             --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
             --spacing-unit: 1rem;
             --border-radius: 4px;
-            --header-height: 70px; /* Approximate height for scroll padding */
+            --header-height: 65px; /* Slightly reduced header height */
             --transition-speed: 0.2s;
+            --mobile-breakpoint: 767px; /* Define mobile breakpoint */
         }
 
         /* --- CSS Reset & Base Styles --- */
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            font-size: 100%;
-            scroll-behavior: smooth;
-            scroll-padding-top: var(--header-height); /* Offset for fixed header */
-        }
-
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { font-size: 100%; scroll-behavior: smooth; scroll-padding-top: var(--header-height); }
         body {
-            font-family: var(--font-primary);
-            line-height: 1.7; /* Slightly more spacious line height */
-            color: var(--color-text);
-            background-color: var(--color-background);
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            overflow-x: hidden; /* Prevent horizontal scroll */
+            font-family: var(--font-primary); line-height: 1.7; color: var(--color-text);
+            background-color: var(--color-background); -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale; overflow-x: hidden;
         }
 
         /* --- Typography --- */
-        h1, h2, h3, h4 {
-            font-weight: 700;
-            line-height: 1.3;
-            color: var(--color-heading);
-            text-transform: uppercase;
-            letter-spacing: 0.5px; /* Subtle spacing for uppercase */
-        }
-
-        h1 {
-            font-size: clamp(2.2rem, 6vw, 3.5rem);
-            margin-bottom: calc(var(--spacing-unit) * 1);
-        }
-
-        h2 {
-            font-size: clamp(1.6rem, 4.5vw, 2.2rem);
-            border-bottom: 1px solid var(--color-border);
-            padding-bottom: 0.6em;
-            margin-top: calc(var(--spacing-unit) * 4); /* More space above section titles */
-            margin-bottom: calc(var(--spacing-unit) * 2);
-        }
-
-        h3 {
-            font-size: clamp(1.1rem, 3vw, 1.3rem);
-            margin-bottom: calc(var(--spacing-unit) * 0.75);
-            text-transform: none;
-            color: var(--color-heading);
-        }
-
-        h4 {
-            font-size: 1rem;
-            margin-bottom: calc(var(--spacing-unit) * 0.5);
-            text-transform: uppercase;
-            color: var(--color-text-light);
-            letter-spacing: 1px;
-        }
-
-        p {
-            margin-bottom: var(--spacing-unit);
-            max-width: 70ch; /* Generous line length for readability */
-        }
-        /* Allow bold tag */
-        strong, b {
-            font-weight: 700;
-        }
-
-        a {
-            color: var(--color-accent);
-            text-decoration: none;
-            transition: color var(--transition-speed) ease;
-        }
-        a:hover, a:focus {
-            color: var(--color-accent-hover);
-            text-decoration: underline; /* Add underline on hover for clarity */
-        }
-
-        ul, ol {
-            list-style-position: outside; /* Standard list style */
-            margin-left: calc(var(--spacing-unit) * 1.5);
-            margin-bottom: var(--spacing-unit);
-        }
+        h1, h2, h3, h4 { font-weight: 700; line-height: 1.3; color: var(--color-heading); text-transform: uppercase; letter-spacing: 0.5px; }
+        h1 { font-size: clamp(2rem, 6vw, 3.2rem); margin-bottom: calc(var(--spacing-unit) * 1); } /* Slightly smaller max h1 */
+        h2 { font-size: clamp(1.5rem, 4.5vw, 2rem); border-bottom: 1px solid var(--color-border); padding-bottom: 0.6em; margin-top: calc(var(--spacing-unit) * 3); margin-bottom: calc(var(--spacing-unit) * 1.5); } /* Less top margin for h2 */
+        h3 { font-size: clamp(1.1rem, 3vw, 1.3rem); margin-bottom: calc(var(--spacing-unit) * 0.75); text-transform: none; color: var(--color-heading); }
+        h4 { font-size: 0.9rem; margin-bottom: calc(var(--spacing-unit) * 0.5); text-transform: uppercase; color: var(--color-text-light); letter-spacing: 1px; }
+        p { margin-bottom: var(--spacing-unit); max-width: 70ch; }
+        strong, b { font-weight: 700; }
+        a { color: var(--color-accent); text-decoration: none; transition: color var(--transition-speed) ease; }
+        a:hover, a:focus { color: var(--color-accent-hover); text-decoration: underline; }
+        ul, ol { list-style-position: outside; margin-left: calc(var(--spacing-unit) * 1.5); margin-bottom: var(--spacing-unit); }
         li { margin-bottom: calc(var(--spacing-unit) * 0.5); }
-
-        blockquote {
-            border-left: 3px solid var(--color-accent);
-            padding-left: calc(var(--spacing-unit) * 1.5);
-            margin: calc(var(--spacing-unit) * 1.5) 0;
-            font-style: italic;
-            color: var(--color-text-light);
-        }
-        blockquote cite {
-            display: block;
-            margin-top: calc(var(--spacing-unit) * 0.5);
-            font-style: normal;
-            font-weight: 700;
-            color: var(--color-text);
-        }
+        blockquote { border-left: 3px solid var(--color-accent); padding-left: calc(var(--spacing-unit) * 1.5); margin: calc(var(--spacing-unit) * 1.5) 0; font-style: italic; color: var(--color-text-light); }
+        blockquote cite { display: block; margin-top: calc(var(--spacing-unit) * 0.5); font-style: normal; font-weight: 700; color: var(--color-text); }
 
         /* --- Layout --- */
-        .container {
-            width: 90%; /* Use percentage for better fluidity */
-            max-width: 1100px; /* Increased max-width */
-            margin: 0 auto;
-            padding: 0 var(--spacing-unit);
-        }
-
+        .container { width: 90%; max-width: 1100px; margin: 0 auto; padding: 0 var(--spacing-unit); }
         header {
-            background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white */
-            border-bottom: 1px solid var(--color-border);
-            padding: 0; /* Padding handled by container */
-            height: var(--header-height);
-            position: sticky; /* Enable sticky header */
-            top: 0;
-            z-index: 100;
-            backdrop-filter: blur(5px); /* Optional: Blur effect for background */
-            -webkit-backdrop-filter: blur(5px);
+            background-color: rgba(255, 255, 255, 0.97); border-bottom: 1px solid var(--color-border);
+            padding: 0; height: var(--header-height); position: sticky; top: 0; z-index: 100;
+            backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px);
         }
-        /* --- Uncomment below if you DON'T want a sticky header ---
-        header {
-            padding: calc(var(--spacing-unit) * 1.5) 0;
-            border-bottom: 1px solid var(--color-border);
-        }
-        header .header-content { height: auto; }
-        */
+        .header-content { display: flex; justify-content: space-between; align-items: center; height: 100%; }
+        .logo { font-size: 1.5rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--color-heading); text-decoration: none; flex-shrink: 0; } /* Prevent logo from shrinking too much */
+        .logo:hover, .logo:focus { text-decoration: none; color: var(--color-accent); }
 
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 100%; /* Fill header height */
-        }
-
-        .logo {
-            font-size: 1.6rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--color-heading);
-            text-decoration: none;
-        }
-        .logo:hover, .logo:focus {
-            text-decoration: none;
-            color: var(--color-accent);
-        }
-
-        nav ul {
-            list-style: none; margin: 0; padding: 0; display: flex; gap: calc(var(--spacing-unit) * 1.8);
-        }
-        nav a {
+        /* --- Desktop Navigation --- */
+        nav.desktop-nav { display: none; } /* Hide desktop nav by default, show in media query */
+        nav.desktop-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: calc(var(--spacing-unit) * 1.8); }
+        nav.desktop-nav a {
             font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;
             color: var(--color-text); text-decoration: none; position: relative; padding: 0.5em 0;
+            white-space: nowrap; /* Prevent wrapping */
         }
-        nav a::after { /* Underline effect for hover/active */
-            content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px;
-            background-color: var(--color-accent); transition: width var(--transition-speed) ease;
-        }
-        nav a:hover::after, nav a:focus::after, nav a.active::after { width: 100%; }
-        nav a:hover, nav a:focus, nav a.active { color: var(--color-heading); } /* Keep text color consistent */
+        nav.desktop-nav a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background-color: var(--color-accent); transition: width var(--transition-speed) ease; }
+        nav.desktop-nav a:hover::after, nav.desktop-nav a:focus::after, nav.desktop-nav a.active::after { width: 100%; }
+        nav.desktop-nav a:hover, nav.desktop-nav a:focus, nav.desktop-nav a.active { color: var(--color-heading); }
 
-        main { padding-top: calc(var(--spacing-unit) * 3); } /* Add space below header */
-
-        section {
-            padding: calc(var(--spacing-unit) * 4) 0; /* Vertical padding */
-            /* Fade-in Animation */
-            opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+        /* --- Mobile Navigation Toggle (Hamburger) --- */
+        .menu-toggle {
+            display: block; /* Show hamburger by default, hide on desktop */
+            background: none; border: none; padding: 0.5rem; cursor: pointer; z-index: 110;
         }
-        section:nth-of-type(even) { background-color: var(--color-background-alt); } /* Alternating backgrounds */
+        .menu-toggle .hamburger-icon { display: block; width: 24px; height: 2px; background-color: var(--color-heading); position: relative; transition: background-color 0s 0.2s; } /* Delay hiding bar */
+        .menu-toggle .hamburger-icon::before,
+        .menu-toggle .hamburger-icon::after { content: ''; display: block; width: 100%; height: 2px; background-color: var(--color-heading); position: absolute; left: 0; transition: transform 0.2s ease-in-out, top 0.2s 0.2s ease-in-out; } /* Delay moving bars */
+        .menu-toggle .hamburger-icon::before { top: -7px; }
+        .menu-toggle .hamburger-icon::after { top: 7px; }
+        /* Hamburger animation when active */
+        .menu-toggle.active .hamburger-icon { background-color: transparent; transition: background-color 0s 0s; } /* Hide middle bar immediately */
+        .menu-toggle.active .hamburger-icon::before { top: 0; transform: rotate(45deg); transition: top 0.2s ease-in-out, transform 0.2s 0.2s ease-in-out; } /* Move then rotate */
+        .menu-toggle.active .hamburger-icon::after { top: 0; transform: rotate(-45deg); transition: top 0.2s ease-in-out, transform 0.2s 0.2s ease-in-out; } /* Move then rotate */
+
+        /* --- Mobile Navigation Menu --- */
+        .mobile-nav {
+            display: none; /* Hidden by default */
+            position: fixed; top: var(--header-height); left: 0; right: 0; bottom: 0;
+            background-color: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px);
+            z-index: 99; padding: calc(var(--spacing-unit) * 2) 0;
+            flex-direction: column; align-items: center; justify-content: center;
+            overflow-y: auto;
+        }
+        .mobile-nav.active { display: flex; } /* Show when active */
+        .mobile-nav ul { list-style: none; margin: 0; padding: 0; text-align: center; }
+        .mobile-nav li { margin-bottom: calc(var(--spacing-unit) * 1.5); }
+        .mobile-nav a {
+            font-size: 1.4rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
+            color: var(--color-heading); text-decoration: none; padding: 0.5em 1em; display: block;
+        }
+        .mobile-nav a:hover, .mobile-nav a:focus { color: var(--color-accent); }
+
+        /* --- Main Content & Sections --- */
+        main { padding-top: calc(var(--spacing-unit) * 2); } /* Less top padding */
+        section { padding: calc(var(--spacing-unit) * 3) 0; opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease-out, transform 0.7s ease-out; }
+        section:nth-of-type(even) { background-color: var(--color-background-alt); }
         section.visible { opacity: 1; transform: translateY(0); }
 
-        footer {
-            background-color: var(--color-heading);
-            color: #ccc; /* Light text on dark background */
-            padding: calc(var(--spacing-unit) * 3) 0;
-            text-align: center;
-            font-size: 0.9rem;
-            margin-top: calc(var(--spacing-unit) * 3);
-        }
+        /* --- Footer --- */
+        footer { background-color: var(--color-heading); color: #ccc; padding: calc(var(--spacing-unit) * 2.5) 0; text-align: center; font-size: 0.9rem; margin-top: calc(var(--spacing-unit) * 3); }
         footer p { margin-bottom: calc(var(--spacing-unit) * 0.5); max-width: none; }
-        footer a {
-            color: #fff; /* White links in footer */
-            text-decoration: underline;
-            font-weight: bold;
-        }
+        footer a { color: #fff; text-decoration: underline; font-weight: bold; }
         footer a:hover, footer a:focus { color: #ddd; }
 
         /* --- Component Styles --- */
-        .hero {
-            min-height: calc(100vh - var(--header-height)); /* Full viewport height minus header */
-            display: flex; align-items: center; text-align: left;
-            padding: calc(var(--spacing-unit) * 2) 0; /* Adjust padding */
-            background-color: var(--color-background); /* Ensure hero always has base bg */
-        }
+        .hero { min-height: 70vh; /* Slightly shorter hero on mobile */ display: flex; align-items: center; text-align: center; /* Center text on mobile */ padding: calc(var(--spacing-unit) * 2) 0; background-color: var(--color-background); }
         .hero-content { width: 100%; }
-        .hero p { font-size: 1.2rem; color: var(--color-text-light); max-width: 60ch; }
+        .hero p { font-size: 1.1rem; color: var(--color-text-light); max-width: 60ch; margin-left: auto; margin-right: auto; } /* Center paragraph too */
+        .hero .button { margin-top: var(--spacing-unit); display: block; width: fit-content; margin-left: auto; margin-right: auto; } /* Stack buttons vertically on mobile */
+        .hero .button + .button { margin-left: auto; margin-top: var(--spacing-unit); } /* Ensure second button is also centered and spaced */
 
         /* Buttons */
-        .button {
-            display: inline-block; padding: calc(var(--spacing-unit)*0.8) calc(var(--spacing-unit)*1.8);
-            border-radius: var(--border-radius); text-transform: uppercase; font-weight: 700;
-            letter-spacing: 1px; text-decoration: none; text-align: center; cursor: pointer;
-            transition: all var(--transition-speed) ease; border: 2px solid transparent;
-        }
-        .button-primary {
-            background-color: var(--color-accent); color: var(--color-background); border-color: var(--color-accent);
-        }
-        .button-primary:hover, .button-primary:focus {
-            background-color: var(--color-accent-hover); border-color: var(--color-accent-hover); color: var(--color-background);
-        }
-        .button-secondary {
-            background-color: transparent; color: var(--color-accent); border-color: var(--color-accent);
-        }
-        .button-secondary:hover, .button-secondary:focus {
-            background-color: var(--color-accent); color: var(--color-background);
-        }
+        .button { display: inline-block; padding: calc(var(--spacing-unit)*0.9) calc(var(--spacing-unit)*1.8); min-height: 44px; min-width: 44px; /* Min tap size */ border-radius: var(--border-radius); text-transform: uppercase; font-weight: 700; letter-spacing: 1px; text-decoration: none; text-align: center; cursor: pointer; transition: all var(--transition-speed) ease; border: 2px solid transparent; line-height: 1.2; }
+        .button-primary { background-color: var(--color-accent); color: var(--color-background); border-color: var(--color-accent); }
+        .button-primary:hover, .button-primary:focus { background-color: var(--color-accent-hover); border-color: var(--color-accent-hover); color: var(--color-background); }
+        .button-secondary { background-color: transparent; color: var(--color-accent); border-color: var(--color-accent); }
+        .button-secondary:hover, .button-secondary:focus { background-color: var(--color-accent); color: var(--color-background); }
 
         /* Process Section */
-        .process-steps {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: calc(var(--spacing-unit) * 2.5); list-style: none; margin-left: 0; padding-top: var(--spacing-unit);
-        }
+        .process-steps { display: grid; grid-template-columns: 1fr; /* Single column on mobile */ gap: calc(var(--spacing-unit) * 2); list-style: none; margin-left: 0; padding-top: var(--spacing-unit); }
         .process-step { border-left: 3px solid var(--color-accent); padding-left: var(--spacing-unit); }
         .process-step h3 { margin-top: 0; color: var(--color-accent); }
 
         /* Portfolio Grid */
-        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: calc(var(--spacing-unit) * 2); }
-        .portfolio-item {
-            background-color: var(--color-background); border: 1px solid var(--color-border);
-            border-radius: var(--border-radius); overflow: hidden; display: flex; flex-direction: column;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .portfolio-item:hover { transform: translateY(-6px); box-shadow: 0 12px 24px rgba(0,0,0,0.08); }
-        .portfolio-image img { display: block; width: 100%; height: 220px; object-fit: cover; background-color: var(--color-border); }
-        .portfolio-content { padding: calc(var(--spacing-unit) * 1.2); flex-grow: 1; }
+        .portfolio-grid { display: grid; grid-template-columns: 1fr; /* Single column on mobile */ gap: calc(var(--spacing-unit) * 1.5); }
+        .portfolio-item { background-color: var(--color-background); border: 1px solid var(--color-border); border-radius: var(--border-radius); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .portfolio-image img { display: block; width: 100%; height: 200px; /* Slightly smaller image height */ object-fit: cover; background-color: var(--color-border); }
+        .portfolio-content { padding: var(--spacing-unit); flex-grow: 1; }
         .portfolio-content h3 { margin-top: 0; }
         .portfolio-tags { margin-top: var(--spacing-unit); font-size: 0.8rem; }
-        .portfolio-tags span {
-            display: inline-block; background-color: var(--color-background-alt); color: var(--color-text-light);
-            padding: 0.2em 0.6em; border-radius: var(--border-radius); margin-right: 0.5em; margin-bottom: 0.5em;
-            border: 1px solid var(--color-border); /* Add subtle border to tags */
-            font-weight: 500;
-        }
-        /* Style specific tags differently if desired */
-        .portfolio-tags span.tag-client { /* Example: style client tags */
-            /* background-color: #e0f2fe; */
-            /* color: #0c4a6e; */
-        }
-        .portfolio-tags span.tag-internal { /* Example: style internal tags */
-            /* background-color: #f3e8ff; */
-            /* color: #581c87; */
-        }
-
+        .portfolio-tags span { display: inline-block; background-color: var(--color-background-alt); color: var(--color-text-light); padding: 0.2em 0.6em; border-radius: var(--border-radius); margin-right: 0.5em; margin-bottom: 0.5em; border: 1px solid var(--color-border); font-weight: 500; }
 
         /* Testimonials */
-        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: calc(var(--spacing-unit) * 2); }
-        .testimonial-item { background-color: var(--color-background); padding: calc(var(--spacing-unit) * 1.5); border-radius: var(--border-radius); border: 1px solid var(--color-border); }
+        .testimonial-grid { display: grid; grid-template-columns: 1fr; /* Single column on mobile */ gap: calc(var(--spacing-unit) * 1.5); }
+        .testimonial-item { background-color: var(--color-background); padding: calc(var(--spacing-unit) * 1.2); border-radius: var(--border-radius); border: 1px solid var(--color-border); } /* Slightly less padding */
 
         /* Contact Form */
-        .contact-form { max-width: 700px; margin: calc(var(--spacing-unit)*2) auto 0 auto; }
-        .form-group { margin-bottom: calc(var(--spacing-unit) * 1.5); }
+        .contact-form { max-width: 100%; /* Full width on mobile */ margin: calc(var(--spacing-unit)*1.5) auto 0 auto; }
+        .form-group { margin-bottom: calc(var(--spacing-unit) * 1.2); }
         .form-group label { display: block; font-weight: 700; margin-bottom: 0.5em; color: var(--color-heading); }
-        .form-group input[type="text"],
-        .form-group input[type="email"],
-        .form-group textarea {
-            width: 100%; padding: calc(var(--spacing-unit) * 0.8); border: 1px solid var(--color-border);
-            border-radius: var(--border-radius); font-family: var(--font-primary); font-size: 1rem;
-            transition: border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
-        }
-        .form-group input[type="text"]:focus,
-        .form-group input[type="email"]:focus,
-        .form-group textarea:focus {
-            outline: none; border-color: var(--color-accent); box-shadow: 0 0 0 2px rgba(0, 94, 255, 0.2);
-        }
-        .form-group textarea { min-height: 150px; resize: vertical; }
-        .form-submit { text-align: center; margin-top: calc(var(--spacing-unit) * 2); }
+        .form-group input[type="text"], .form-group input[type="email"], .form-group textarea { width: 100%; padding: calc(var(--spacing-unit) * 0.9); border: 1px solid var(--color-border); border-radius: var(--border-radius); font-family: var(--font-primary); font-size: 1rem; transition: border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease; -webkit-appearance: none; /* Prevent iOS styling */ }
+        .form-group input[type="text"]:focus, .form-group input[type="email"]:focus, .form-group textarea:focus { outline: none; border-color: var(--color-accent); box-shadow: 0 0 0 2px rgba(0, 94, 255, 0.2); }
+        .form-group textarea { min-height: 120px; resize: vertical; }
+        .form-submit { text-align: center; margin-top: calc(var(--spacing-unit) * 1.5); }
 
         /* Utilities */
         .text-center { text-align: center; }
-        .section-intro { max-width: 70ch; margin-left: auto; margin-right: auto; text-align: center; margin-bottom: calc(var(--spacing-unit) * 2.5); font-size: 1.1rem; color: var(--color-text-light); }
+        .section-intro { max-width: 95%; /* Allow wider intro on mobile */ margin-left: auto; margin-right: auto; text-align: center; margin-bottom: calc(var(--spacing-unit) * 2); font-size: 1.05rem; color: var(--color-text-light); }
+
+
+        /* --- Desktop Styles (Overrides for larger screens) --- */
+        @media (min-width: calc(var(--mobile-breakpoint) + 1px)) {
+            .container { padding: 0 var(--spacing-unit); } /* Restore desktop container padding */
+
+            /* Show desktop nav, hide mobile toggle */
+            nav.desktop-nav { display: block; }
+            .menu-toggle { display: none; }
+            .mobile-nav { display: none !important; } /* Ensure mobile nav is hidden */
+
+            /* Restore multi-column grids */
+            .process-steps { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+            .portfolio-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: calc(var(--spacing-unit) * 2); }
+            .testimonial-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: calc(var(--spacing-unit) * 2); }
+
+            /* Restore hero layout */
+            .hero { min-height: calc(100vh - var(--header-height)); text-align: left; }
+            .hero p { margin-left: 0; margin-right: 0; }
+            .hero .button { display: inline-block; width: auto; margin: var(--spacing-unit) 0 0 0; }
+            .hero .button + .button { margin-left: 1em; margin-top: var(--spacing-unit); } /* Restore side-by-side buttons */
+
+            /* Restore section/component padding/margins */
+             main { padding-top: calc(var(--spacing-unit) * 3); }
+             section { padding: calc(var(--spacing-unit) * 4) 0; }
+             h2 { margin-top: calc(var(--spacing-unit) * 4); margin-bottom: calc(var(--spacing-unit) * 2); }
+             .portfolio-image img { height: 220px; }
+             .testimonial-item { padding: calc(var(--spacing-unit) * 1.5); }
+             .contact-form { max-width: 700px; margin: calc(var(--spacing-unit)*2) auto 0 auto; }
+             .section-intro { max-width: 70ch; font-size: 1.1rem; }
+        }
 
     </style>
 </head>
-<body>
+<body > <!-- Body class updated by JS -->
 
     <header>
         <div class="container header-content">
             <a href="#home" class="logo">KIVO</a>
-            <nav aria-label="Main Navigation">
+
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav" aria-label="Main Navigation">
                 <ul>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#services">Capabilities</a></li> <!-- Renamed nav item -->
+                    <li><a href="#services">Capabilities</a></li>
                     <li><a href="#process">Process</a></li>
                     <li><a href="#work">Work</a></li>
-                    <li><a href="#testimonials">Clients</a></li>
+                    <li><a href="#testimonials">Partners</a></li> <!-- Changed from Clients -->
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+
+            <!-- Mobile Navigation Toggle -->
+            <button class="menu-toggle" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-menu">
+                <span class="hamburger-icon"></span>
+            </button>
+
         </div>
     </header>
+
+     <!-- Mobile Navigation Menu -->
+     <nav class="mobile-nav" id="mobile-menu" aria-hidden="true">
+        <ul>
+             <li><a href="#about">About</a></li>
+             <li><a href="#services">Capabilities</a></li>
+             <li><a href="#process">Process</a></li>
+             <li><a href="#work">Work</a></li>
+             <li><a href="#testimonials">Partners</a></li>
+             <li><a href="#contact">Contact</a></li>
+        </ul>
+     </nav>
 
     <main>
 
@@ -362,10 +267,9 @@
         <section class="hero" id="home">
             <div class="container hero-content">
                 <h1>Design That Endures.</h1>
-                <!-- ** UPDATED TEXT ** -->
                 <p>KIVO crafts exceptional products defined by longevity and considered aesthetics – partnering with innovative brands and pursuing our own design explorations.</p>
                 <a href="#contact" class="button button-primary">Start a Conversation</a>
-                <a href="#work" class="button button-secondary" style="margin-left: 1em;">View Our Work</a>
+                <a href="#work" class="button button-secondary">View Our Work</a>
             </div>
         </section>
 
@@ -374,20 +278,17 @@
             <div class="container">
                 <h2>Philosophy: Beyond the Superficial</h2>
                  <p class="section-intro">We believe great design isn't just about appearance; it's about creating value that lasts. Our approach is grounded in principles that ensure enduring quality and relevance.</p>
-                <!-- ** UPDATED TEXT ** -->
                 <p>
                     KIVO was founded on the conviction that the objects we interact with daily should be companions, not consumables. We reject planned obsolescence and disposable culture, focusing instead on <strong>longevity</strong>, <strong>material honesty</strong>, and <strong>precision execution</strong>. This philosophy is the bedrock of our work, applied rigorously whether we are elevating a partner's brand through product design or developing KIVO's own signature pieces. Our minimalist ethos strips away the non-essential, allowing the inherent quality of materials and the clarity of function to define the product experience. We design for decades, not seasons.
                 </p>
             </div>
         </section>
 
-        <!-- Services Section -->
-        <section id="services"> <!-- ID remains 'services' for linking -->
+        <!-- Capabilities Section -->
+        <section id="services">
             <div class="container">
-                <h2>Capabilities: From Concept to Creation</h2> <!-- Headline remains -->
-                 <!-- ** UPDATED TEXT ** -->
+                <h2>Capabilities: From Concept to Creation</h2>
                 <p class="section-intro">We offer a comprehensive suite of design services, applying our core principles to develop meaningful products – both for client partners and our internal KIVO collection.</p>
-                 <!-- ** UPDATED LIST ** -->
                 <ul>
                     <li><strong>Industrial Design & Product Development:</strong> Concept generation, sketching, 3D modeling, prototyping, user testing for client projects and internal initiatives.</li>
                     <li><strong>Material Strategy & CMF:</strong> Expert selection of durable and appropriate materials, defining color palettes and surface finishes across all projects.</li>
@@ -403,7 +304,6 @@
         <section id="process">
             <div class="container">
                 <h2>Our Collaborative Process</h2>
-                 <!-- ** UPDATED TEXT ** -->
                 <p class="section-intro">Our structured approach ensures clarity and exceptional outcomes. While detailed here for client collaborations, these core phases often inform our internal development process as well, ensuring rigor and quality throughout.</p>
                 <ol class="process-steps">
                     <li class="process-step">
@@ -434,7 +334,6 @@
         <section id="work">
             <div class="container">
                 <h2>Selected Work: Design in Practice</h2>
-                <!-- ** UPDATED TEXT ** -->
                 <p class="section-intro">Explore a selection of projects showcasing our design principles in action. This includes collaborations with leading brands and examples from KIVO's own evolving collection of original designs.</p>
                 <div class="portfolio-grid">
                     <!-- Portfolio Item 1 (Example: Internal) -->
@@ -445,7 +344,6 @@
                         <div class="portfolio-content">
                             <h3>Precision Writing Instrument</h3>
                             <p>A machined pen designed for balance, tactile satisfaction, and lifetime use, featuring a robust click mechanism and standardized refill compatibility.</p>
-                            <!-- ** UPDATED TAGS ** -->
                             <div class="portfolio-tags">
                                 <span class="tag-internal">KIVO Initiative</span>
                                 <span>Industrial Design</span>
@@ -461,7 +359,6 @@
                         <div class="portfolio-content">
                             <h3>Minimalist Tech Accessory for Brand X</h3>
                             <p>Developed a line of durable tech accessories aligning with the client's premium brand identity, focusing on material honesty and user experience.</p>
-                             <!-- ** UPDATED TAGS ** -->
                              <div class="portfolio-tags">
                                 <span class="tag-client">Client Collaboration</span>
                                 <span>Product Design</span>
@@ -477,7 +374,6 @@
                         <div class="portfolio-content">
                             <h3>Modular Steel Shelving</h3>
                             <p>Internal exploration into versatile home/office furniture, crafted from powder-coated sheet steel, balancing visual lightness with structural integrity.</p>
-                             <!-- ** UPDATED TAGS ** -->
                              <div class="portfolio-tags">
                                 <span class="tag-internal">KIVO Initiative</span>
                                 <span>Furniture Design</span>
@@ -491,10 +387,10 @@
             </div>
         </section>
 
-        <!-- Testimonials Section (Remains focused on clients) -->
+        <!-- Testimonials Section -->
         <section id="testimonials">
             <div class="container">
-                <h2>What Our Partners Say</h2> <!-- Adjusted title slightly -->
+                <h2>What Our Partners Say</h2>
                 <p class="section-intro">Building lasting partnerships through exceptional design and collaboration.</p>
                 <div class="testimonial-grid">
                     <div class="testimonial-item">
@@ -511,8 +407,6 @@
                     </div>
                      <!-- Add more testimonials -->
                 </div>
-                 <!-- Optional: Add client logos here -->
-                 <!-- <div class="client-logos text-center" style="margin-top: 3rem;"><h4>Trusted By:</h4> ... logos ... </div> -->
             </div>
         </section>
 
@@ -520,7 +414,6 @@
         <section id="contact">
             <div class="container">
                 <h2 class="text-center">Let's Build Something Enduring Together</h2>
-                 <!-- ** UPDATED TEXT ** -->
                 <p class="section-intro">
                     Ready to discuss a potential collaboration for your brand, inquire about KIVO's original products, or explore other opportunities? Reach out – we look forward to hearing from you.
                     Use the form below or email us directly at <a href="mailto:freddycharles04@gmail.com">freddycharles04@gmail.com</a>. <!-- !! REPLACE EMAIL !! -->
@@ -574,11 +467,38 @@
             const yearSpan = document.getElementById('year');
             if (yearSpan) { yearSpan.textContent = new Date().getFullYear(); }
 
-            // --- Smooth Scrolling & Active Nav Link Highlighting ---
-            const navLinks = document.querySelectorAll('nav a[href^="#"]');
-            const sections = document.querySelectorAll('main section[id]'); // Get sections with IDs in main
+            // --- Mobile Menu Toggle ---
+            const menuToggle = document.querySelector('.menu-toggle');
+            const mobileNav = document.querySelector('.mobile-nav');
+            const body = document.body;
 
-            // Function to handle smooth scroll
+            if (menuToggle && mobileNav) {
+                menuToggle.addEventListener('click', () => {
+                    const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+                    menuToggle.setAttribute('aria-expanded', !isExpanded);
+                    menuToggle.classList.toggle('active');
+                    mobileNav.classList.toggle('active');
+                    mobileNav.setAttribute('aria-hidden', isExpanded);
+                    body.style.overflow = !isExpanded ? 'hidden' : ''; // Prevent scrolling when menu open
+                });
+
+                // Close menu when a link is clicked
+                const mobileNavLinks = mobileNav.querySelectorAll('a');
+                mobileNavLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        menuToggle.setAttribute('aria-expanded', 'false');
+                        menuToggle.classList.remove('active');
+                        mobileNav.classList.remove('active');
+                        mobileNav.setAttribute('aria-hidden', 'true');
+                        body.style.overflow = ''; // Restore scrolling
+                    });
+                });
+            }
+
+            // --- Smooth Scrolling (Applies to both desktop and mobile links) ---
+            const navLinks = document.querySelectorAll('nav a[href^="#"]'); // Select links from both navs
+            const sections = document.querySelectorAll('main section[id]');
+
             function smoothScroll(targetId) {
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
@@ -586,75 +506,76 @@
                     const elementPosition = targetElement.getBoundingClientRect().top;
                     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
                     window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-                    if(history.pushState) { history.pushState(null, null, targetId); }
-                    else { window.location.hash = targetId; }
+                    // Don't push history state here if menu closing handles clicks
                 }
             }
 
-            // Add click listeners for smooth scroll
             navLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    smoothScroll(targetId);
+                    // Prevent default only if it's a hash link within the page
+                    if (this.pathname === window.location.pathname && this.hash) {
+                        e.preventDefault();
+                        const targetId = this.getAttribute('href');
+                        smoothScroll(targetId);
+                         // Update hash manually after scroll (or let IntersectionObserver handle active state)
+                         // Optional: setTimeout(() => { if(history.pushState) { history.pushState(null, null, targetId); } }, 300); // Delay hash update
+                    }
                 });
             });
 
-             // Intersection Observer for Nav Link Highlighting & Section Fade-in
-            const observerOptions = {
-                root: null, // viewport
-                // Adjust rootMargin: top margin offsets for sticky header, bottom margin makes active state trigger sooner when scrolling down
-                rootMargin: `-${(document.querySelector('header')?.offsetHeight || 70) + 10}px 0px -45% 0px`,
-                threshold: 0 // Trigger as soon as the section boundary crosses the rootMargin
+             // --- Intersection Observer for Active Nav Link Highlighting (Desktop Only) & Section Fade-in ---
+             // Active link highlighting is less crucial/useful on mobile where nav is hidden
+             const desktopNavLinks = document.querySelectorAll('.desktop-nav a[href^="#"]'); // Target only desktop links
+             let lastActiveLink = null; // Track active link
+
+             const observerOptions = {
+                root: null,
+                rootMargin: `-${(document.querySelector('header')?.offsetHeight || 65) + 10}px 0px -45% 0px`,
+                threshold: 0
             };
 
-            let lastActiveLink = null; // Keep track of the last activated link
+             const sectionObserver = new IntersectionObserver((entries, observer) => {
+                let topmostVisibleSectionId = null;
+                let minTop = window.innerHeight;
 
-            const sectionObserver = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
-                     // Fade-in animation
+                    // Fade-in animation (runs always)
                     if (entry.isIntersecting) {
                          entry.target.classList.add('visible');
                     }
-                    // Active nav link highlighting logic: find the *topmost* visible section
-                    // Find the topmost section that is intersecting within the threshold margins
-                    let topmostVisibleSectionId = null;
-                    let minTop = window.innerHeight;
 
-                    sections.forEach(sec => {
-                        const rect = sec.getBoundingClientRect();
-                        // Check if section is within the vertical bounds defined implicitly by rootMargin
-                        const topEdgeInView = rect.top < (window.innerHeight * (1 - 0.45)) - (document.querySelector('header')?.offsetHeight || 70); // Adjusted top check based on bottom margin
-                        const bottomEdgeInView = rect.bottom > (document.querySelector('header')?.offsetHeight || 70) + 10; // Adjusted bottom check based on top margin
+                    // Active link calculation (only relevant part for desktop)
+                    const rect = entry.target.getBoundingClientRect();
+                    const topEdgeInView = rect.top < (window.innerHeight * (1 - 0.45)) - (document.querySelector('header')?.offsetHeight || 65);
+                    const bottomEdgeInView = rect.bottom > (document.querySelector('header')?.offsetHeight || 65) + 10;
 
-                        if (topEdgeInView && bottomEdgeInView && rect.top < minTop) {
-                            minTop = rect.top;
-                            topmostVisibleSectionId = sec.getAttribute('id');
-                        }
-                    });
-
-                    // Update active link based on the topmost visible section
-                    if (topmostVisibleSectionId) {
-                        const newActiveLink = document.querySelector(`nav a[href="#${topmostVisibleSectionId}"]`);
-                        if (newActiveLink !== lastActiveLink) {
-                            // Remove active class from previous link
-                            if (lastActiveLink) {
-                                lastActiveLink.classList.remove('active');
-                            }
-                            // Add active class to the current link
-                            if (newActiveLink) {
-                                newActiveLink.classList.add('active');
-                                lastActiveLink = newActiveLink;
-                            } else {
-                                lastActiveLink = null; // Reset if no link found for the section
-                            }
-                        }
-                    } else if (window.scrollY < 200 && lastActiveLink) {
-                         // If scrolled near the top and no section is active, deactivate all
-                         lastActiveLink.classList.remove('active');
-                         lastActiveLink = null;
+                    if (topEdgeInView && bottomEdgeInView && rect.top < minTop) {
+                        minTop = rect.top;
+                        topmostVisibleSectionId = entry.target.getAttribute('id');
                     }
                 });
+
+                 // Update active link only if on desktop viewport
+                 if (window.innerWidth > 767) { // Use the same breakpoint as CSS
+                     if (topmostVisibleSectionId) {
+                         const newActiveLink = document.querySelector(`.desktop-nav a[href="#${topmostVisibleSectionId}"]`);
+                         if (newActiveLink !== lastActiveLink) {
+                             if (lastActiveLink) { lastActiveLink.classList.remove('active'); }
+                             if (newActiveLink) { newActiveLink.classList.add('active'); }
+                             lastActiveLink = newActiveLink;
+                         }
+                     } else if (window.scrollY < 200 && lastActiveLink) {
+                         lastActiveLink.classList.remove('active');
+                         lastActiveLink = null;
+                     }
+                 } else {
+                     // Ensure no active links on mobile if observer triggers
+                     if (lastActiveLink) {
+                         lastActiveLink.classList.remove('active');
+                         lastActiveLink = null;
+                     }
+                 }
+
             }, observerOptions);
 
             sections.forEach(section => { sectionObserver.observe(section); });
@@ -663,54 +584,39 @@
              const heroSection = document.getElementById('home');
              if (heroSection) {
                 const heroObserver = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('visible');
-                            heroObserver.unobserve(entry.target);
-                        }
-                    });
+                    entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); heroObserver.unobserve(entry.target); }});
                 }, { threshold: 0.1 });
                 heroObserver.observe(heroSection);
              }
 
-
-            console.log('KIVO enhanced multi-feature script loaded.');
+            console.log('KIVO mobile-resilient script loaded.');
 
             // --- Contact Form Placeholder Logic ---
-            const contactForm = document.querySelector('.contact-form');
+             const contactForm = document.querySelector('.contact-form');
             if (contactForm) {
                 contactForm.addEventListener('submit', function(e) {
                      const requiredInputs = contactForm.querySelectorAll('[required]');
                      let isValid = true;
                      requiredInputs.forEach(input => {
-                         // Simple validation: Check if empty or only whitespace
-                         if (!input.value.trim()) {
+                         const isEmail = input.type === 'email';
+                         const isEmpty = !input.value.trim();
+                         const isInvalidEmail = isEmail && input.value.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value);
+
+                         if (isEmpty || isInvalidEmail) {
                              isValid = false;
-                             input.style.borderColor = 'red'; // Indicate error
-                             // Optional: Add error message element
+                             input.style.borderColor = 'red';
                          } else {
-                             input.style.borderColor = 'var(--color-border)'; // Reset border on valid
-                             // Optional: Remove error message element
-                         }
-                         // Add more specific validation (e.g., email format) if needed
-                         if (input.type === 'email' && input.value.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value)) {
-                            isValid = false;
-                            input.style.borderColor = 'red';
+                             input.style.borderColor = 'var(--color-border)';
                          }
                      });
 
                      if (!isValid) {
-                         e.preventDefault(); // Stop submission
-                         alert('Please fill out all required fields correctly.'); // Simple alert
+                         e.preventDefault();
+                         alert('Please fill out all required fields correctly.');
                      } else {
-                         // Optional: Disable button and show sending state
                          const submitButton = contactForm.querySelector('button[type="submit"]');
-                         if (submitButton) {
-                             submitButton.disabled = true;
-                             submitButton.textContent = 'Sending...';
-                         }
+                         if (submitButton) { submitButton.disabled = true; submitButton.textContent = 'Sending...'; }
                          console.log('Form data appears valid, attempting submission...');
-                         // Form submission continues to the 'action' URL...
                      }
                 });
             }
